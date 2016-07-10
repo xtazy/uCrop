@@ -71,8 +71,8 @@ public class UCropActivity extends AppCompatActivity {
     private static final String TAG = "UCropActivity";
 
     private static final int TABS_COUNT = 3;
-    private static final int SCALE_WIDGET_SENSITIVITY_COEFFICIENT = 15000;
-    private static final int ROTATE_WIDGET_SENSITIVITY_COEFFICIENT = 42;
+    private static final int SCALE_WIDGET_SENSITIVITY_COEFFICIENT = 500;
+    private static final int ROTATE_WIDGET_SENSITIVITY_COEFFICIENT = 5;
 
     private String mToolbarTitle;
 
