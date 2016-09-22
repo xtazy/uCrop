@@ -139,10 +139,24 @@ public class BitmapLoadUtils {
             height = display.getHeight();
         }
 
-        int screenDiagonal = (int) Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
+        // Twice the device screen diagonal as default
+        int maxBitmapSize = (int) Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2));
 
+        // Check for max texture size via Canvas
         Canvas canvas = new Canvas();
-        return Math.min(screenDiagonal * 2, Math.min(canvas.getMaximumBitmapWidth(), canvas.getMaximumBitmapHeight()));
+        final int maxCanvasSize = Math.min(canvas.getMaximumBitmapWidth(), canvas.getMaximumBitmapHeight());
+        if (maxCanvasSize > 0) {
+            maxBitmapSize = Math.min(maxBitmapSize, maxCanvasSize);
+        }
+
+        // Check for max texture size via GL
+        final int maxTextureSize = EglUtils.getMaxTextureSize();
+        if (maxTextureSize > 0) {
+            maxBitmapSize = Math.min(maxBitmapSize, maxTextureSize);
+        }
+
+        Log.d(TAG, "maxBitmapSize: " + maxBitmapSize);
+        return maxBitmapSize;
     }
 
     @SuppressWarnings("ConstantConditions")

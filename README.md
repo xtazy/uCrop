@@ -3,6 +3,7 @@
 #### This project aims to provide an ultimate and flexible image cropping experience. Made in [Yalantis] (https://yalantis.com/?utm_source=github)
 
 #### [How We Created uCrop] (https://yalantis.com/blog/how-we-created-ucrop-our-own-image-cropping-library-for-android/)
+#### Check this [project on Dribbble] (https://dribbble.com/shots/2484752-uCrop-Image-Cropping-Library)
 
 <img src="preview.gif" width="800" height="600">
 
@@ -10,11 +11,13 @@
 
 *For a working implementation, please have a look at the Sample Project - sample*
 
-<a href="https://play.google.com/store/apps/details?id=com.yalantis.ucrop.sample&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png" width="185" height="60"/></a>
+<a href="https://play.google.com/store/apps/details?id=com.yalantis.ucrop.sample&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="185" height="70"/></a>
 
 1. Include the library as local library project.
 
-    ``` compile 'com.yalantis:ucrop:2.1.2' ```
+    ``` compile 'com.yalantis:ucrop:2.2.0' ``` - lightweight general solution 
+    
+    ``` compile 'com.yalantis:ucrop:2.2.0-native' ``` - get power of the native code to preserve image quality (+ about 1.5 MB to an apk size)
     
 2. Add UCropActivity into your AndroidManifest.xml
 
@@ -81,6 +84,11 @@ Currently you can change:
   
 # Changelog
 
+### Version: 2.2
+
+  * Several fixes including [#121](https://github.com/Yalantis/uCrop/issues/121), [#173](https://github.com/Yalantis/uCrop/issues/173), [#184](https://github.com/Yalantis/uCrop/issues/184) and more!
+  * New APIs introduced [#149](https://github.com/Yalantis/uCrop/issues/149), [#186](https://github.com/Yalantis/uCrop/issues/186) and [#156](https://github.com/Yalantis/uCrop/issues/156)
+
 ### Version: 2.1
 
   * Fixes issue with EXIF data (images taken on front camera with Samsung devices mostly) [#130](https://github.com/Yalantis/uCrop/issues/130) [#111](https://github.com/Yalantis/uCrop/issues/111)
@@ -139,6 +147,7 @@ We’d be really happy if you sent us links to your projects where you use our c
 - [Thirty](https://play.google.com/store/apps/details?id=com.twominds.thirty).
 - [Light Smart HD](https://play.google.com/store/apps/details?id=com.SmartCamera.simple).
 - [BCReader] (https://play.google.com/store/apps/details?id=com.iac.bcreader).
+- [Xprezia: Share Your Passion] (https://play.google.com/store/apps/details?id=com.xprezzia.cnj).
 
 ## License
 
